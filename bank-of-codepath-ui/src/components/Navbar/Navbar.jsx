@@ -1,13 +1,16 @@
-import * as React from "react"
-import FilterInput from "../FilterInput/FilterInput"
-import codepath from "../../assets/codepath.svg"
-import avatar from "../../assets/avatar.png"
-import "./Navbar.css"
+import * as React from "react";
+import FilterInput from "../FilterInput/FilterInput";
+import codepath from "../../assets/codepath.svg";
+import avatar from "../../assets/avatar.png";
+import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <a className="logo">Logo</a>
+      <a className="logo">
+        <Logo path="/" />
+      </a>
 
       <div className="search">
         <FilterInput />
@@ -27,13 +30,13 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
-export function Logo() {
+export function Logo({ path }) {
   return (
-    <a className="logo">
+    <Link to={path}>
       <img src={codepath} alt="logo" />
-    </a>
-  )
+    </Link>
+  );
 }
