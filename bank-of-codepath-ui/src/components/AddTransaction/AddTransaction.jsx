@@ -1,5 +1,6 @@
-import * as React from "react"
-import "./AddTransaction.css"
+import * as React from "react";
+import "./AddTransaction.css";
+import { useEffect } from "react";
 
 export default function AddTransaction() {
   return (
@@ -8,7 +9,7 @@ export default function AddTransaction() {
 
       <AddTransactionForm />
     </div>
-  )
+  );
 }
 
 export function AddTransactionForm() {
@@ -33,5 +34,5 @@ export function AddTransactionForm() {
         </button>
       </div>
     </div>
-  )
+  );
 }
